@@ -1,6 +1,6 @@
 {
   "name": "stepup",
-  "version": "0.3.16",
+  "version": "0.4.0",
   "description": "A simple control-flow library for Node that makes parallel execution, serial execution, and error handling painless.",
   "homepage": "http://github.com/CrabDude/stepup",
   "repository": {
