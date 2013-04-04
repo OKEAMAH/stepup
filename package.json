@@ -1,14 +1,14 @@
 {
-  "name": "stepdown",
+  "name": "stepup",
   "version": "0.3.16",
   "description": "A simple control-flow library for Node that makes parallel execution, serial execution, and error handling painless.",
-  "homepage": "http://github.com/Schoonology/stepdown",
+  "homepage": "http://github.com/CrabDude/stepup",
   "repository": {
     "type": "git",
-    "url": "git://github.com/Schoonology/stepdown.git"
+    "url": "git://github.com/CrabDude/stepup.git"
   },
-  "author": "Michael Schoonmaker <michael.r.schoonmaker@gmail.com>",
-  "main": "lib/stepdown",
+  "author": "Adam Crabtree <dude@noderiety.com>",
+  "main": "lib/stepup",
   "engines": {
     "node": ">=0.2.0"
   },
@@ -32,7 +32,7 @@
   },
   "scripts": {
     "test": "mocha --reporter spec",
-    "bench": "survey ./bench/stepdown"
+    "bench": "survey ./bench/stepup"
   },
   "license": "MIT",
   "optionalDependencies": {

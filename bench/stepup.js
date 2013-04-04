@@ -1,19 +1,19 @@
-var stepdown = require('../lib/stepdown');
+var $$ = require('../lib/stepup');
 
 module.exports = {
     'Single Sync Step': function (done) {
-        stepdown([function stepOne(context) {
+        $$([function stepOne(context) {
         }], done);
     },
 
     'Double Sync Steps': function (done) {
-        stepdown([function stepOne(context) {
+        $$([function stepOne(context) {
         }, function stepTwo(context) {
         }], done);
     },
 
     'Quadruple Sync Steps': function (done) {
-        stepdown([function stepOne(context) {
+        $$([function stepOne(context) {
         }, function stepTwo(context) {
         }, function stepThree(context) {
         }, function stepFour(context) {
@@ -21,7 +21,7 @@ module.exports = {
     },
 
     'Ten Sync Steps': function (done) {
-        stepdown([function stepOne(context) {
+        $$([function stepOne(context) {
         }, function stepTwo(context) {
         }, function stepThree(context) {
         }, function stepFour(context) {
@@ -35,13 +35,13 @@ module.exports = {
     },
 
     'Single Async Step': function (done) {
-        stepdown([function stepOne(context) {
+        $$([function stepOne(context) {
             process.nextTick(context.push('first'));
         }], done);
     },
 
     'Double Async Steps': function (done) {
-        stepdown([function stepOne(context) {
+        $$([function stepOne(context) {
             process.nextTick(context.push('first'));
         }, function stepTwo(context) {
             process.nextTick(context.push('first'));
@@ -49,7 +49,7 @@ module.exports = {
     },
 
     'Quadruple Async Steps': function (done) {
-        stepdown([function stepOne(context) {
+        $$([function stepOne(context) {
             process.nextTick(context.push('first'));
         }, function stepTwo(context) {
             process.nextTick(context.push('first'));
@@ -61,7 +61,7 @@ module.exports = {
     },
 
     'Ten Async Steps': function (done) {
-        stepdown([function stepOne(context) {
+        $$([function stepOne(context) {
             process.nextTick(context.push('first'));
         }, function stepTwo(context) {
             process.nextTick(context.push('first'));
@@ -85,14 +85,14 @@ module.exports = {
     },
 
     'Single Async Step with two results': function (done) {
-        stepdown([function stepOne(context) {
+        $$([function stepOne(context) {
             process.nextTick(context.push('first'));
             process.nextTick(context.push('first'));
         }], done);
     },
 
     'Double Async Steps with two results': function (done) {
-        stepdown([function stepOne(context) {
+        $$([function stepOne(context) {
             process.nextTick(context.push('first'));
             process.nextTick(context.push('first'));
         }, function stepTwo(context) {
@@ -102,7 +102,7 @@ module.exports = {
     },
 
     'Quadruple Async Steps with two results': function (done) {
-        stepdown([function stepOne(context) {
+        $$([function stepOne(context) {
             process.nextTick(context.push('first'));
             process.nextTick(context.push('first'));
         }, function stepTwo(context) {
@@ -118,7 +118,7 @@ module.exports = {
     },
 
     'Ten Async Steps with two results': function (done) {
-        stepdown([function stepOne(context) {
+        $$([function stepOne(context) {
             process.nextTick(context.push('first'));
             process.nextTick(context.push('first'));
         }, function stepTwo(context) {
@@ -152,7 +152,7 @@ module.exports = {
     },
 
     'Single Group Step with two results': function (done) {
-        stepdown([function stepOne(context) {
+        $$([function stepOne(context) {
             var generator = context.group();
 
             process.nextTick(generator());
@@ -161,7 +161,7 @@ module.exports = {
     },
 
     'Double Group Steps with two results': function (done) {
-        stepdown([function stepOne(context) {
+        $$([function stepOne(context) {
             var generator = context.group();
 
             process.nextTick(generator());
@@ -175,7 +175,7 @@ module.exports = {
     },
 
     'Quadruple Group Steps with two results': function (done) {
-        stepdown([function stepOne(context) {
+        $$([function stepOne(context) {
             var generator = context.group();
 
             process.nextTick(generator());
@@ -199,7 +199,7 @@ module.exports = {
     },
 
     'Ten Group Steps with two results': function (done) {
-        stepdown([function stepOne(context) {
+        $$([function stepOne(context) {
             var generator = context.group();
 
             process.nextTick(generator());
