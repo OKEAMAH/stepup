@@ -819,3 +819,11 @@ describe('Stepup', function () {
         })
     })
 })
+
+describe('config', function () {
+    it('should toggle long stack traces')
+
+    it('should be chainable', function() {
+        expect(stepup.config({})).to.equal(stepup)
+    })
+})
